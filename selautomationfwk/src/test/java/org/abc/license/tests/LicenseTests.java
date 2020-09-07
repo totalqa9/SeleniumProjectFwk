@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class LicenseTests {
 
 	
-	@Test(description="Validate the title of the website")
+	@Test(description="Validate the title of the website",priority=1)
 	public void validateTotalQATitle()
 	{
 		
