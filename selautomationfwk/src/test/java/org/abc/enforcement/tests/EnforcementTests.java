@@ -14,6 +14,10 @@ public class EnforcementTests extends TestBase{
 	{
 		HelperClass helper = new HelperClass(driver);
 		helper.login("uname", "password");
+		driver.get("http://total-qa.com");
+		driver.findElement(By.xpath("")).sendKeys("uname"));
+		driver.findElement(By.xpath("")).sendKeys("uname"));
+		driver.findElement(By.xpath("")).click();
 	}
 	
 	@Test
