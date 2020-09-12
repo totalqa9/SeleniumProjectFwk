@@ -15,8 +15,8 @@ public class LoginTests {
 	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://total-qa.com/");
-		String expected ="Total-QA - Automation Tools";
+		driver.get("https://www.google.com/");
+		String expected ="Google";
 		String actual =driver.getTitle();
 		Assert.assertEquals(actual, expected);
 	}
