@@ -1,0 +1,28 @@
+pipeline{
+    agent any
+    stages{
+        
+        stage('Download Code')
+        {
+            steps
+            {
+                
+                git branch: 'modifyLicense_branch', url: 'https://github.com/totalqa9/SeleniumProjectFwk.git'
+                echo 'Code Download Successful'
+                
+            }
+            
+        }
+        stage('Execute Tests')
+        {
+            steps{
+                    dir("${env.WORKSPACE}/selautomationfwk") 
+                    {
+                        // some block
+                        bat label: 'Executing Selenium Tests', script: 'mvn clean test'
+                    }
+                }
+        }
+        
+    }
+}
